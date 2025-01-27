@@ -39,7 +39,7 @@ cd go-tutorial
 
 ### Initialize Git repository and write a README file
 
-1. Initialize a new Git repository with this command:
+1\. Initialize a new Git repository with this command:
 
 ```bash
 git init
@@ -48,7 +48,7 @@ git init
 > **What happens when I run the `init` subcommand?**
 >  Running `git init` intializes a folder as a new, empty `git` repository.
 
-2. Create a README file:
+2\. Create a README file:
 
 ```bash
 echo "# Go Tutorial following instructions from https://raghavarun.github.io/comp423-course-notes/tutorials/go-setup/" > README.md
