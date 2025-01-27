@@ -39,22 +39,22 @@ cd go-tutorial
 
 ### Initialize Git repository and write a README file
 
-1\. Initialize a new Git repository with this command:
+1. Initialize a new Git repository with this command:
 
-```bash
-git init
-```
+    ```bash
+    git init
+    ```
 
-> **What happens when I run the `init` subcommand?**
->  Running `git init` intializes a folder as a new, empty `git` repository.
+    ??? info "What happens when I run the `init` subcommand?"
+    Running `git init` intializes a folder as a new, empty `git` repository.
 
-2\. Create a README file:
+2. Create a README file:
 
-```bash
-echo "# Go Tutorial following instructions from https://raghavarun.github.io/comp423-course-notes/tutorials/go-setup/" > README.md
-git add README.md
-git commit -m "Initial commit with README"
-```
+    ```bash
+    echo "# Go Tutorial following instructions from https://raghavarun.github.io/comp423-course-notes/tutorials/go-setup/" > README.md
+    git add README.md
+    git commit -m "Initial commit with README"
+    ```
 
 ## Step 2: Create a Remote Repository on GitHub and Link your Local Repository
 
@@ -74,30 +74,26 @@ git commit -m "Initial commit with README"
 ### Link your Local Repository to GitHub
 
 1. Add the GitHub repository as a remote:
-```bash
-git remote add origin https://github.com/your-username/go-tutorial.git
-```
+    ```bash
+    git remote add origin https://github.com/your-username/go-tutorial.git
+    ```
 
-Replace `your-username` with your GitHub username.
+    Replace `your-username` with your GitHub username.
 
 2. Check your default branch name with the subcommand `git branch`. If it isn't `main`, rename it to `main` with the following command: 
 
-```bash
-git branch -M main
-```
+    ```bash
+    git branch -M main
+    ```
 
 3. Push your local commits to the GitHub repository: 
 
-```bash
-git push --set-upstream origin main
-```
+    ```bash
+    git push --set-upstream origin main
+    ```
 
-> **What does the --set -upstream flag do?**
->   `git push --set-upstream origin main`: This command pushes the main branch to the remote repository origin.
->    The `--set-upstream` flag sets up the main branch to track the remote branch, meaning future pushes and pulls
->   can be done without specifying the branch name and just writing `git push origin` when working on your local 
->    main branch. This long flag has a corresponding `-u` short flag. (From [UNC COMP 423 MKDocs Tutorial]
->    (https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-3-link-your-local-repository-to-github)) 
+??? info "What does the --set -upstream flag do?"
+`git push --set-upstream origin main`: This command pushes the main branch to the remote repository origin. The `--set-upstream` flag sets up the main branch to track the remote branch, meaning future pushes and pulls can be done without specifying the branch name and just writing `git push origin` when working on your local main branch. This long flag has a corresponding `-u` short flag. (From [UNC COMP 423 MKDocs Tutorial] (https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-3-link-your-local-repository-to-github)) 
 
 4. In your web browser, refreshing your GitHub repository will show that the same commit you made locally has now been pushed to the remote repository. 
 
@@ -109,34 +105,34 @@ git push --set-upstream origin main
 
 2. Inside your `go-tutorial` directory, create a `.devcontainer` folder: 
 
-```bash
-mkdir .devcontainer 
-cd .devcontainer
-```
+    ```bash
+    mkdir .devcontainer 
+    cd .devcontainer
+    ```
 
-You can also create the folder by clicking the **new folder** symbol that appears in the SOURCE CONTROL section of your VS Code interface. 
+    You can also create the folder by clicking the **new folder** symbol that appears in the SOURCE CONTROL section of your VS Code interface. 
 
 3. Create a file named `devcontainer.json` in the `.devcontainer` folder. This will be your configuration file. We will be using the following configuration: 
 
-```json
-{
-  "name": "Go Tutorial",
-  "image": "mcr.microsoft.com/devcontainers/go:1.22",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "go.gopath": "/go"
-      },
-      "extensions": [
-        "golang.go"
-      ]
+    ```json title='devcontainer.json'
+    {
+    "name": "Go Tutorial",
+    "image": "mcr.microsoft.com/devcontainers/go:1.22",
+    "customizations": {
+        "vscode": {
+        "settings": {
+            "go.gopath": "/go"
+        },
+        "extensions": [
+            "golang.go"
+        ]
+        }
     }
-  }
-}
-```
+    }
+    ```
 
-* The **Docker Image** for this dev container is the Microsoft prebuilt container image for Go development. It includes Go version `1.22` and common Go dependencies. 
-* We also include the **Go Extension** for VS Code, which provides helpful features like highlighting syntax, code autocompletion, and hover information.
+    * The **Docker Image** for this dev container is the Microsoft prebuilt container image for Go development. It includes Go version `1.22` and common Go dependencies. 
+    * We also include the **Go Extension** for VS Code, which provides helpful features like highlighting syntax, code autocompletion, and hover information.
 
 ### Reopen the project in a VS Code Dev Container
 
@@ -166,8 +162,8 @@ go mod init go-tutorial
 
 Create a file named `hello.go` in the root of your project:
 
-```Go
-package hello
+```Go title='hello.go'
+package main 
 
 import "fmt"
 
@@ -190,18 +186,18 @@ go run hello.go
 
 1. Use the `go build` command to create an executable binary: 
 
-```bash
-go build -o runhello
-```
-* This generates an executable file named `runhello` in the current directory. 
+    ```bash
+    go build -o runhello
+    ```
+    * This generates an executable file named `runhello` in the current directory. 
 
 2. Run the binary directly:
 
-```bash
-./runhello
-```
-* Output:
-    `Hello COMP423`
+    ```bash
+    ./runhello
+    ```
+    * Output:
+        `Hello COMP423`
 
 ### Using `run` vs `build`
 
@@ -215,9 +211,14 @@ Speaking of which, let's remove the binary we built:
 rm runhello
 ```
 
-## Step 5: Pushing Changes to Remote Repository
+## Step 5: Committing and Pushing Changes to Remote Repository
 
-Now that we have created and run code in Go, we will conclude our tutorial by pushing our changes to the remote repository we created. Simply run `git push` once more:
+Now that we have created and run code in Go, we will conclude our tutorial by pushing our changes to the remote repository we created. We'll just commit and push once more:
+
+```bash
+git add . # adds all files we made
+git commit -m "Wrote Hello World code and ran it"
+```
 
 ```bash
 git push --set-upstream origin main
