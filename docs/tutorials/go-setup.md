@@ -45,8 +45,8 @@ cd go-tutorial
 git init
 ```
 
-!!! What happens when I run the `init` subcommand?
-    Running `git init` intializes a folder as a new, empty `git` repository.
+> **What happens when I run the `init` subcommand?**
+>  Running `git init` intializes a folder as a new, empty `git` repository.
 
 2. Create a README file:
 
@@ -92,12 +92,12 @@ git branch -M main.
 git push --set-upstream origin main
 ```
 
-!!! What does the --set -upstream flag do?
-    `git push --set-upstream origin main`: This command pushes the main branch to the remote repository origin.
-    The `--set-upstream` flag sets up the main branch to track the remote branch, meaning future pushes and pulls
-    can be done without specifying the branch name and just writing `git push origin` when working on your local 
-    main branch. This long flag has a corresponding `-u` short flag. (From [UNC COMP 423 MKDocs Tutorial]
-    (https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-3-link-your-local-repository-to-github)) 
+> **What does the --set -upstream flag do?**
+>   `git push --set-upstream origin main`: This command pushes the main branch to the remote repository origin.
+>    The `--set-upstream` flag sets up the main branch to track the remote branch, meaning future pushes and pulls
+>   can be done without specifying the branch name and just writing `git push origin` when working on your local 
+>    main branch. This long flag has a corresponding `-u` short flag. (From [UNC COMP 423 MKDocs Tutorial]
+>    (https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-3-link-your-local-repository-to-github)) 
 
 4. In your web browser, refreshing your GitHub repository will show that the same commit you made locally has now been pushed to the remote repository. 
 
