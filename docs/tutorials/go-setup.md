@@ -75,7 +75,7 @@ git commit -m "Initial commit with README"
 
 1. Add the GitHub repository as a remote:
 ```bash
-git remote add origin https://github.com/your-username/comp423-course-notes.git
+git remote add origin https://github.com/your-username/go-tutorial.git
 ```
 
 Replace `your-username` with your GitHub username.
