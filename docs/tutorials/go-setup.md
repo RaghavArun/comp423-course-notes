@@ -83,7 +83,7 @@ Replace `your-username` with your GitHub username.
 2. Check your default branch name with the subcommand `git branch`. If it isn't `main`, rename it to `main` with the following command: 
 
 ```bash
-git branch -M main.
+git branch -M main
 ```
 
 3. Push your local commits to the GitHub repository: 
