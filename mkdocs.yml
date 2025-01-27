@@ -1,3 +1,7 @@
 site_name: COMP423 Course Notes
 theme:
   name: material
+
+markdown_extensions:
+  - admonition  # adding admonitions for call-outs 
+  - codehilite  # adding syntax highlighting for code blocks
