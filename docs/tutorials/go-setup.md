@@ -7,10 +7,10 @@
 
 1. **A GitHub account:** If you don’t have one yet, sign up at [GitHub](https://github.com/).
 2. **Git installed:** [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don’t already have it.
-2. **Visual Studio Code (VS Code):** Download and install from [here](https://code.visualstudio.com/).
-3. **Docker Installed:** Install Docker Desktop from [here](https://www.docker.com/products/docker-desktop/).
-4. **Dev Containers Extension for VS Code:** If it's not installed already, navigate to the "Extensions" tab in VS Code, search "Dev Containers", and install the Microsoft option.
-5. **Command-Line Basics:** Be familiar with basic commands such as `mkdir` and `cd`.
+3. **Visual Studio Code (VS Code):** Download and install from [here](https://code.visualstudio.com/).
+4. **Docker Installed:** Install Docker Desktop from [here](https://www.docker.com/products/docker-desktop/).
+5. **Dev Containers Extension for VS Code:** If it's not installed already, navigate to the "Extensions" tab in VS Code, search "Dev Containers", and install the Microsoft option.
+6. **Command-Line Basics:** Be familiar with basic commands such as `mkdir` and `cd`.
 
 ## Step 1: Create a Local Directory and Initialize Git
 
