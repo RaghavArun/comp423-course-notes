@@ -128,7 +128,7 @@ You can also create the folder by clicking the **new folder** symbol that appear
         "go.gopath": "/go"
       },
       "extensions": [
-        "golang.Go"
+        "golang.go"
       ]
     }
   }
@@ -144,7 +144,7 @@ Reopen the project in the dev container we just configuered by pressing `Ctrl+Sh
 
 ###  Verifying Go Installation:
 
-Close the terminal tab you were working and open a terminal pane within VS Code (you can use `Ctrl+`` ` `` ` to show the terminal pane).
+Close the terminal tab you were working and open a terminal pane within VS Code (you can use ```Ctrl+` ``` to show the terminal pane).
 
 Now, you can check to ensure your dev container is running the correct Go version (`1.22`) by running the following command:
 
